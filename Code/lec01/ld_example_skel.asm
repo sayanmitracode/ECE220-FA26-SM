@@ -1,0 +1,8 @@
+; LC-3 review: LD, LDI, LDR, LEA
+.ORIG x3000
+    LD   R6, LABEL
+    LDI  R6, LABEL
+    LDR  R2, R6, #1
+    LEA  R2, LABEL
+LABEL   .FILL x5001
+.END
