@@ -14,12 +14,18 @@
         ST   R2, RES2
         HALT
 ; ---- MULT: R2 <- R0 * R1 (R1 >= 0) ----
-MULT    ST   R3, SAVER3   ; callee-save R3
+MULT
+
+
 ; set product to 0, counter to R1
+
 
 ; loop: add R0 into product, count down
 
-MDONE   LD   R3, SAVER3   ; restore R3
+
+
+MDONE
+
 ; return to the caller (which instruction?)
 
 SAVER3  .FILL x0000
