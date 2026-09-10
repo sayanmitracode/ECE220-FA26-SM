@@ -2,16 +2,16 @@
 #include <stdio.h>
 int main() {
     int x;
-    /* --- while: may run zero times -------- */
-    x = 0;
+    /* --- while: test first, may run zero times --- */
+    x = 10;
     while (x < 10) {
-        printf("x=%d\n", x);
+        printf("while: x=%d\n", x);   /* never runs */
         x++;
     }
-    /* --- do-while: runs at least once ----- */
-    x = 0;
+    /* --- do-while: test last, runs at least once --- */
+    x = 10;
     do {
-        printf("x=%d\n", x);
+        printf("do:    x=%d\n", x);   /* runs once */
         x++;
     } while (x < 10);
     /* --- for: init; condition; update ----- */
