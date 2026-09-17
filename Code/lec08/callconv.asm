@@ -4,7 +4,7 @@
 .ORIG x3000
         LD   R6, USER_STACK   ; R6: stack pointer
         ADD  R5, R6, #-1      ; R5: frame pointer
-        ADD  R6, R6, #-2      ; main's locals: number, answer
+        ADD  R6, R6, #-2      ; locals: number, answer
         AND  R0, R0, #0
         ADD  R0, R0, #4
         STR  R0, R5, #0       ; number = 4
@@ -18,6 +18,7 @@
         LDR  R0, R6, #0       ; return value is on top
         STR  R0, R5, #-1      ; answer = Fact(number)
         ADD  R6, R6, #2       ; pop RV + argument
+; ---- 8. resume the caller ----
         HALT
 ; ==== int Fact(int n) ====
 ; ---- 3. callee setup ----
