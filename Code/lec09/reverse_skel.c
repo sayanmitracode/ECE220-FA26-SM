@@ -4,9 +4,13 @@
 void array_reversal(int array[], int n) {
     /* declare a loop counter and a temporary */
 
+
     /* how far does the loop need to go? */
 
+
         /* swap array[i] with its mirror element */
+
+
 
 }
 
