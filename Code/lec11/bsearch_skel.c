@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define SIZE 10
 
-int binary_search(int array[], int item) {
+int binary_search(int array[], int n, int item) {
     /* low and high bracket the live region */
 
     /* while the region is non-empty:       */
@@ -17,7 +17,7 @@ int binary_search(int array[], int item) {
 
 int main() {
     int a[SIZE] = {2,5,8,12,16,23,38,56,72,91};
-    printf("23 at index %d\n", binary_search(a, 23));
-    printf("40 at index %d\n", binary_search(a, 40));
+    printf("23 at index %d\n", binary_search(a, SIZE, 23));
+    printf("40 at index %d\n", binary_search(a, SIZE, 40));
     return 0;
 }

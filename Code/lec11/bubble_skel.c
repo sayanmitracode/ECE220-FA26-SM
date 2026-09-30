@@ -6,7 +6,7 @@ void swap(int *x, int *y) {
     int t = *x; *x = *y; *y = t;
 }
 
-void bubble_sort(int array[]) {
+void bubble_sort(int array[], int n) {
     /* declare counter and "swapped" flag */
 
     do {
@@ -20,8 +20,8 @@ void bubble_sort(int array[]) {
 }
 
 int main() {
-    int a[SIZE] = {5, 1, 4, 2, 8}, i;
-    bubble_sort(a);
+    int a[SIZE] = {8, 1, 4, 2, 5}, i;
+    bubble_sort(a, SIZE);
     for (i = 0; i < SIZE; i++) printf("%d ", a[i]);
     printf("\n");
     return 0;

@@ -2,8 +2,8 @@
 #include <stdio.h>
 #define SIZE 10
 
-int binary_search(int array[], int item) {
-    int low = 0, high = SIZE - 1, mid;
+int binary_search(int array[], int n, int item) {
+    int low = 0, high = n - 1, mid;
     while (low <= high) {
         mid = (low + high) / 2;
         if (array[mid] == item)
@@ -18,7 +18,7 @@ int binary_search(int array[], int item) {
 
 int main() {
     int a[SIZE] = {2,5,8,12,16,23,38,56,72,91};
-    printf("23 at index %d\n", binary_search(a, 23));
-    printf("40 at index %d\n", binary_search(a, 40));
+    printf("23 at index %d\n", binary_search(a, SIZE, 23));
+    printf("40 at index %d\n", binary_search(a, SIZE, 40));
     return 0;
 }
