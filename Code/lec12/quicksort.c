@@ -15,7 +15,7 @@ int partition(int array[], int start, int end) {
 void quicksort(int array[], int start, int end) {
     int p;
     if (start >= end)
-        return;              /* base: 0 or 1 element */
+        return;              /* base case */
     p = partition(array, start, end);
     quicksort(array, start, p - 1);
     quicksort(array, p + 1, end);
