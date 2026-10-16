@@ -16,16 +16,20 @@ int main() {
 /* a, b are in {0, 1, 2} and a != b.        */
 void movetower(int n, int a, int b) {
     /* base case: a tower of one disc */
-
-
-
+    if (n==1){
+        printf("Move disk %d from %d -> %d \n", n, a, b);
+        return;
+    }
+    else 
+    {
     /* top n-1 discs: pole a to third pole */
-
+        movetower(n-1, a, 3-a-b);
 
     /* disc n: pole a to pole b */
-
+        printf("Move disk %d from %d -> %d \n", n, a, b);
 
     /* the n-1 discs: third pole to pole b */
-
+        movetower(n-1, 3-a-b, b);
+    }
 
 }

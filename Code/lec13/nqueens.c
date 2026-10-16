@@ -1,6 +1,6 @@
 /* n-queens on an N x N board: recursion with backtracking */
 #include <stdio.h>
-#define N 4
+#define N 8
 
 /* Is board[row][col] safe from the queens  */
 /* in rows 0 .. row-1?  1 = safe, 0 = not.  */
